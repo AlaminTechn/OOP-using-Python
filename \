@@ -1,0 +1,30 @@
+
+
+class Person:
+    def __init__(self, firstName, lastName):
+        self.firstName = firstName
+        self.lastName = lastName
+
+    def printName(self):
+        print(self.firstName, self.lastName)
+
+
+# create a child class from parent class
+
+class Child(Person):
+    def __init__(self, firstName, lastName, mother):
+        super().__init__(self, firstName, lastName)
+        self.mother = mother
+
+    def printWithMotherName(self):
+        print(
+            f"Full Name: {self.firstName} {self.lastName} and Mother Name: {self.mother}"
+        )
+
+        # use Class
+x = Person("Alamin", "Sarker")
+x.printName()
+
+
+y = Child("Afnan", "Sarker", "Atoara")
+y.printWithMotherName()
